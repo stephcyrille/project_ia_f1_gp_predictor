@@ -2,4 +2,6 @@ data/
 scrapping/data/
 *.pyc
 scrapping/draft.ipynb
-
+.ipynb_checkpoints/
+.jupyter/
+.venv/
