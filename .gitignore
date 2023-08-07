@@ -1,0 +1,5 @@
+data/
+scrapping/data/
+*.pyc
+scrapping/draft.ipynb
+

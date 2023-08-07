@@ -1,0 +1,31 @@
+version: '1.0.0'
+services:
+  selenium-hub:
+    image: selenium/hub
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+
+  chrome:
+    image: selenium/node-chrome
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+  
+  f1: 
+    image: jupyter/scipy-notebook  
+    volumes:
+      - /home/$USER/f1lab/project:/home/jovyan/work/py
+      - /home/$USER/f1lab/project/.jupyter:/home/jovyan/.jupyter
+    ports:
+      - "8333:8888"
+    environment:
+      - TZ="Europe/Paris"
+    restart: always
+    depends_on:
+      - chrome
