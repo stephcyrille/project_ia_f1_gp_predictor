@@ -1,0 +1,253 @@
+gp_title,year,clean_weather,round,weather_warm,weather_cold,weather_dry,weather_wet,weather_cloudy
+Belgian Grand Prix,2023,dry,12,0,0,1,0,0
+Hungarian F1 Grand Prix,2023,dry,11,0,0,1,0,0
+British F1 Grand Prix,2023,"wet,dry",10,0,0,1,1,0
+Austrian F1 Grand Prix,2023,dry,9,0,0,1,0,0
+Canadian F1 Grand Prix,2023,wet,8,0,0,0,1,0
+Spanish Grand Prix,2023,wet,7,0,0,0,1,0
+Monaco F1 Grand Prix,2023,dry,6,0,0,1,0,0
+Miami Formula 1 Grand Prix,2023,"partly cloudy,dry",5,0,0,1,0,1
+Azerbaijan F1 Grand Prix,2023,dry,4,0,0,1,0,0
+Australian Grand Prix,2023,dry,3,0,0,1,0,0
+Saudi Arabia F1 Grand Prix,2023,dry,2,0,0,1,0,0
+Bahrain Grand Prix,2023,dry,1,0,0,1,0,0
+Abu Dhabi Grand Prix,2022,dry,22,0,0,1,0,0
+Brazilian Sao Paulo Grand Prix,2022,dry,21,0,0,1,0,0
+Mexico Grand Prix,2022,dry,20,0,0,1,0,0
+USA Grand Prix,2022,dry,19,0,0,1,0,0
+Japanese Grand Prix,2022,dry,18,0,0,1,0,0
+Singapore Grand Prix,2022,dry,17,0,0,1,0,0
+Italian Grand Prix,2022,dry,16,0,0,1,0,0
+Dutch Grand Prix,2022,dry,15,0,0,1,0,0
+Belgian Grand Prix,2022,dry,14,0,0,1,0,0
+Hungarian F1 Grand Prix,2022,dry,13,0,0,1,0,0
+French F1 Grand Prix,2022,dry,12,0,0,1,0,0
+Austrian F1 GP,2022,dry,11,0,0,1,0,0
+British F1 Grand Prix,2022,wet,10,0,0,0,1,0
+Canadian F1 Grand Prix,2022,wet,9,0,0,0,1,0
+Azerbaijan F1 Grand Prix,2022,dry,8,0,0,1,0,0
+Monaco F1 Grand Prix,2022,dry,7,0,0,1,0,0
+Spanish F1 Grand Prix,2022,dry,6,0,0,1,0,0
+Miami Formula 1 Grand Prix,2022,"dry,wet",5,0,0,1,1,0
+Emilia Romagna F1 GP,2022,"dry,wet",4,0,0,1,1,0
+Australian F1 Grand Prix,2022,dry,3,0,0,1,0,0
+Saudi Arabia F1 Grand Prix,2022,dry,2,0,0,1,0,0
+Bahrain Grand Prix,2022,dry,1,0,0,1,0,0
+Abu Dhabi Grand Prix,2021,dry,22,0,0,1,0,0
+Saudi Arabia F1 Grand Prix,2021,dry,21,0,0,1,0,0
+Qatar F1 Grand Prix,2021,dry,20,0,0,1,0,0
+Brazilian Grand Prix,2021,dry,19,0,0,1,0,0
+Mexico F1 Grand Prix,2021,dry,18,0,0,1,0,0
+USA F1 Grand Prix,2021,dry,17,0,0,1,0,0
+Turkish F1 Grand Prix,2021,"dry,rain,dry",16,0,0,1,1,0
+Russian Grand Prix,2021,dry,15,0,0,1,0,0
+Italian Grand Prix,2021,dry,14,0,0,1,0,0
+Dutch Grand Prix,2021,dry,13,0,0,1,0,0
+Belgian Grand Prix,2021,wet,12,0,0,0,1,0
+Hungarian Grand Prix,2021,dry,11,0,0,1,0,0
+British Grand Prix,2021,dry,10,0,0,1,0,0
+Austrian F1 Grand Prix,2021,dry,9,0,0,1,0,0
+Styrian F1 Grand Prix,2021,dry,8,0,0,1,0,0
+French F1 Grand Prix,2021,dry,7,0,0,1,0,0
+Azerbaijan F1 Grand Prix,2021,dry,6,0,0,1,0,0
+Monaco F1 Grand Prix,2021,dry,5,0,0,1,0,0
+Spanish F1,2021,dry,4,0,0,1,0,0
+Portuguese Grand Prix,2021,dry,3,0,0,1,0,0
+Emilia Romagna Grand Prix,2021,dry,2,0,0,1,0,0
+Bahrain Grand Prix,2021,dry,1,0,0,1,0,0
+Abu Dhabi F1 GP,2020,dry,17,0,0,1,0,0
+Sakhir F1 GP,2020,dry,16,0,0,1,0,0
+Bahrain F1 GP,2020,dry,15,0,0,1,0,0
+Turkish F1 GP,2020,"wet,dry,wet",14,0,0,1,1,0
+Emilia Romagna GP,2020,dry,13,0,0,1,0,0
+Portuguese Grand Prix,2020,dry,12,0,0,1,0,0
+Eifel Grand Prix,2020,dry,11,0,0,1,0,0
+Russian Grand Prix,2020,dry,10,0,0,1,0,0
+Tuscan Grand Prix,2020,dry,9,0,0,1,0,0
+Italian Grand Prix,2020,dry,8,0,0,1,0,0
+Belgian Grand Prix,2020,dry,7,0,0,1,0,0
+Spanish Grand Prix,2020,dry,6,0,0,1,0,0
+70th Anniversary Grand Prix,2020,dry,5,0,0,1,0,0
+British Grand Prix,2020,dry,4,0,0,1,0,0
+Hungarian Grand Prix,2020,dry,3,0,0,1,0,0
+Austrian Grand Prix,2020,wet,2,0,0,0,1,0
+Austrian Grand Prix,2020,dry,1,0,0,1,0,0
+Abu Dhabi F1 Grand Prix,2019,dry,21,0,0,1,0,0
+Brazilian F1 Grand Prix,2019,dry,20,0,0,1,0,0
+USA F1 Grand Prix,2019,dry,19,0,0,1,0,0
+Mexico Grand Prix,2019,dry,18,0,0,1,0,0
+Japanese Grand Prix,2019,dry,17,0,0,1,0,0
+Russian Grand Prix,2019,dry,16,0,0,1,0,0
+Singapore Grand Prix,2019,dry,15,0,0,1,0,0
+Italian Grand Prix,2019,dry,14,0,0,1,0,0
+Belgian Grand Prix,2019,dry,13,0,0,1,0,0
+Hungarian Grand Prix,2019,dry,12,0,0,1,0,0
+German Grand Prix,2019,dry,11,0,0,1,0,0
+British Grand Prix,2019,dry,10,0,0,1,0,0
+Austrian Grand Prix,2019,"sunny,dry",9,1,0,1,0,0
+French Grand Prix,2019,"sunny,dry",8,1,0,1,0,0
+Canadian Grand Prix,2019,"sunny,dry",7,1,0,1,0,0
+Monaco Grand Prix,2019,"cloudy,dry",6,0,0,1,0,1
+Spanish Grand Prix,2019,"sunny,dry",5,1,0,1,0,0
+Azerbaijan Grand Prix,2019,"sunny,dry",4,1,0,1,0,0
+Chinese Grand Prix,2019,"sunny,dry",3,1,0,1,0,0
+Bahrain Grand Prix,2019,"sunny,dry",2,1,0,1,0,0
+Australian Grand Prix,2019,"sunny,dry",1,1,0,1,0,0
+Abu Dhabi Grand Prix,2018,"sunny,dry",21,1,0,1,0,0
+Brazilian Grand Prix,2018,partly cloudy,20,0,0,0,0,1
+Mexican Grand Prix,2018,"cloudy,dry",19,0,0,1,0,1
+US F1 Grand Prix,2018,cloudy,18,0,0,0,0,1
+Japanese F1 Grand Prix,2018,cloudy,17,0,0,0,0,1
+Russian F1 Grand Prix,2018,sunny,16,1,0,0,0,0
+Singapore Grand Prix,2018,dry,15,0,0,1,0,0
+Italian Grand Prix,2018,overcast,14,0,0,0,0,1
+Belgian Grand Prix,2018,"cloudy,dry,wet",13,0,0,1,1,1
+Hungarian Grand Prix,2018,rain,12,0,0,0,1,0
+German Grand Prix,2018,overcast,11,0,0,0,0,1
+British Grand Prix,2018,sunny,10,1,0,0,0,0
+Austrian Grand Prix,2018,sunny,9,1,0,0,0,0
+French Grand Prix,2018,partly cloudy,8,0,0,0,0,1
+Canadian Grand Prix,2018,"sunny,clear sky",7,1,0,0,0,0
+Monaco Grand Prix,2018,"sunny,clear sky",6,1,0,0,0,0
+Spanish Grand Prix,2018,overcast,5,0,0,0,0,1
+Azerbaijan Grand Prix,2018,overcast,4,0,0,0,0,1
+Chinese Grand Prix,2018,"dry,overcast",3,0,0,1,0,1
+Bahrain Grand Prix,2018,overcast,2,0,0,0,0,1
+Australian Grand Prix,2018,"dry,sunny",1,1,0,1,0,0
+Abu Dhabi Grand Prix,2017,"dry,sunny",20,1,0,1,0,0
+Brazilian Grand Prix,2017,sunny,19,1,0,0,0,0
+Mexico Grand Prix  ,2017,"dry,sunny",18,1,0,1,0,0
+USA Grand Prix,2017,dry,17,0,0,1,0,0
+Japanese Grand Prix,2017,dry,16,0,0,1,0,0
+Malaysian Grand Prix,2017,dry,15,0,0,1,0,0
+Singapore Grand Prix,2017,dry,14,0,0,1,0,0
+Italian Grand Prix,2017,"wet,cloudy",13,0,0,0,1,1
+Belgian Grand Prix,2017,"dry,sunny",12,1,0,1,0,0
+Hungarian Grand Prix,2017,"dry,sunny",11,1,0,1,0,0
+British Grand Prix,2017,"rainy,overcast",10,0,0,0,1,1
+Austrian Grand Prix,2017,"sunny,clear sky",9,1,0,0,0,0
+Azerbaijan Grand Prix,2017,"sunny,clear sky",8,1,0,0,0,0
+Canadian Grand Prix,2017,"sunny,clear sky",7,1,0,0,0,0
+Monaco Grand Prix,2017,"sunny,clear sky",6,1,0,0,0,0
+Spanish Grand Prix,2017,"sunny,clear sky",5,1,0,0,0,0
+Russian Grand Prix,2017,"sunny,clear sky",4,1,0,0,0,0
+Bahrain Grand Prix,2017,dry,3,0,0,1,0,0
+Chinese Grand Prix,2017,overcast,2,0,0,0,0,1
+Australian Grand Prix,2017,sunny,1,1,0,0,0,0
+Abu Dhabi Grand Prix,2016,sunny,21,1,0,0,0,0
+Brazilian Grand Prix,2016,"overcast,light rain",20,0,0,0,1,1
+Mexico Grand Prix  ,2016,sunny,19,1,0,0,0,0
+USA Grand Prix,2016,"dry,overcast",18,0,0,1,0,1
+Japanese Grand Prix,2016,"dry,overcast",17,0,0,1,0,1
+Malaysian Grand Prix,2016,"dry,sunny",16,1,0,1,0,0
+Singapore Grand Prix,2016,"dry,sunny",15,1,0,1,0,0
+Italian Grand Prix,2016,"dry,clear",14,1,0,1,0,0
+Belgian Grand Prix,2016,"dry,clear",13,1,0,1,0,0
+German Grand Prix,2016,"partly cloudy,dry",12,0,0,1,0,1
+Hungarian Grand Prix,2016,"dry,sunny",11,1,0,1,0,0
+British Grand Prix,2016,"dry,overcast",10,0,0,1,0,1
+Austrian Grand Prix,2016,cloudy,9,0,0,0,0,1
+European Grand Prix,2016,"dry,sunny",8,1,0,1,0,0
+Canadian Grand Prix,2016,"dry,sunny",7,1,0,1,0,0
+Monaco Grand Prix,2016,sunny,6,1,0,0,0,0
+Spanish Grand Prix,2016,"dry,sunny",5,1,0,1,0,0
+Russian Grand Prix,2016,"dry,sunny",4,1,0,1,0,0
+Chinese Grand Prix,2016,"dry,sunny",3,1,0,1,0,0
+Bahrain Grand Prix,2016,"dry,clear sky",2,1,0,1,0,0
+Australian Grand Prix,2016,"dry,cloudy",1,0,0,1,0,1
+Abu Dhabi Grand Prix,2015,"dry,clear sky",19,1,0,1,0,0
+Brazilian Grand Prix,2015,dry,18,0,0,1,0,0
+Mexican Grand Prix,2015,"dry,cloudy",17,0,0,1,0,1
+US Grand Prix,2015,"wet,cloudy",16,0,0,0,1,1
+Russian Grand Prix,2015,"dry,cloudy",15,0,0,1,0,1
+Japanese Grand Prix,2015,"dry,cloudy",14,0,0,1,0,1
+Singapore Grand Prix,2015,"dry,cloudy sky",13,0,0,1,0,0
+Italian Grand Prix,2015,partly cloudy,12,0,0,0,0,1
+Belgian Grand Prix,2015,cloudy,11,0,0,0,0,1
+Hungarian Grand Prix,2015,sunny,10,1,0,0,0,0
+British Grand Prix,2015,"cloudy,rain at time",9,0,0,0,1,1
+Austrian Grand Prix,2015,cloudy,8,0,0,0,0,1
+Canadian Grand Prix,2015,partly cloudy,7,0,0,0,0,1
+Monaco Grand Prix,2015,partly cloudy,6,0,0,0,0,1
+Spanish Grand Prix,2015,sunny,5,1,0,0,0,0
+Bahrain Grand Prix,2015,"sunny,clear",4,1,0,0,0,0
+Chinese Grand Prix,2015,dry,3,0,0,1,0,0
+Malaysian Grand Prix,2015,sunny,2,1,0,0,0,0
+Australian Grand Prix,2015,parly cloudy,1,0,0,0,0,0
+Abu Dhabi Grand Prix,2014,clear sky,19,1,0,0,0,0
+Brazilian Grand Prix,2014,sunny,18,1,0,0,0,0
+US Grand Prix,2014,sunny,17,1,0,0,0,0
+Russian Grand Prix,2014,"fine,dry",16,1,0,1,0,0
+Japanese Grand Prix,2014,rain,15,0,0,0,1,0
+Singapore Grand Prix,2014,clear sky,14,1,0,0,0,0
+Italian Grand Prix,2014,sunny,13,1,0,0,0,0
+Belgian Grand Prix,2014,cloudy,12,0,0,0,0,1
+Hungarian Grand Prix,2014,overcast,11,0,0,0,0,1
+German Grand Prix,2014,cloudy,10,0,0,0,0,1
+British Grand Prix,2014,cloudy,9,0,0,0,0,1
+Austrian Grand Prix,2014,"partly cloudy,hot,dry",8,1,0,1,0,1
+Canadian Grand Prix,2014,sunny,7,1,0,0,0,0
+Monaco Grand Prix,2014,overcast,6,0,0,0,0,1
+Spanish Grand Prix,2014,sunny,5,1,0,0,0,0
+Chinese Grand Prix,2014,"mostly cloudy,dry",4,0,0,1,0,1
+Bahrain Grand Prix,2014,dry,3,0,0,1,0,0
+Malaysian Grand Prix,2014,dry,2,0,0,1,0,0
+Australian Grand Prix,2014,overcast,1,0,0,0,0,1
+Brazilian Grand Prix,2013,dry,19,0,0,1,0,0
+US Grand Prix,2013,"partly cloud,warm",18,1,0,0,0,1
+Abu Dhabi Grand Prix,2013,dry,17,0,0,1,0,0
+Indian Grand Prix,2013,sunny,16,1,0,0,0,0
+Japanese Grand Prix,2013,"warm,sunny",15,1,0,0,0,0
+Korean Grand Prix,2013,cloudy,14,0,0,0,0,1
+Singapore Grand Prix,2013,dry,13,0,0,1,0,0
+Italian Grand Prix,2013,cloudy,12,0,0,0,0,1
+Belgian Grand Prix,2013,cloudy,11,0,0,0,0,1
+Hungarian Grand Prix,2013,sunny,10,1,0,0,0,0
+German Grand Prix,2013,sunny,9,1,0,0,0,0
+British Grand Prix,2013,dry,8,0,0,1,0,0
+Canadian Grand Prix,2013,mild,7,0,1,0,0,0
+Monaco Grand Prix,2013,"warm,sunny",6,1,0,0,0,0
+Spanish Grand Prix,2013,sunny,5,1,0,0,0,0
+Bahrain Grand Prix,2013,sunny,4,1,0,0,0,0
+Chinese Grand Prix,2013,cloudy,3,0,0,0,0,1
+Malaysian Grand Prix,2013,"cloudy,dry",2,0,0,1,0,1
+Australian Grand Prix,2013,"fine,dry",1,1,0,1,0,0
+Brazilian Grand Prix,2012,rain,20,0,0,0,1,0
+US Grand Prix,2012,dry,19,0,0,1,0,0
+Abu Dhabi Grand Prix,2012,dry,18,0,0,1,0,0
+Indian Grand Prix,2012,dry,17,0,0,1,0,0
+Korean Grand Prix,2012,"fine,dry",16,1,0,1,0,0
+Japanese Grand Prix,2012,"fine,dry",15,1,0,1,0,0
+Singapore Grand Prix,2012,"hot,humid",14,1,0,0,1,0
+Italian Grand Prix,2012,"dry,sunny",13,1,0,1,0,0
+Belgian Grand Prix,2012,"fine,dry",12,1,0,1,0,0
+Hungarian Grand Prix,2012,"fine,dry",11,1,0,1,0,0
+German Grand Prix,2012,"fine,dry",10,1,0,1,0,0
+British Grand Prix,2012,dry,9,0,0,1,0,0
+Spanish Grand Prix,2012,"partly cloudy,dry",8,0,0,1,0,1
+Canadian Grand Prix,2012,"fine,dry",7,1,0,1,0,0
+Monaco Grand Prix,2012,"fine,dry",6,1,0,1,0,0
+Spanish Grand Prix,2012,"parly cloudy,dry",5,0,0,1,0,0
+Bahrain Grand Prix,2012,"sunny,hot",4,1,0,0,0,0
+Chinese Grand Prix,2012,overcast,3,0,0,0,0,1
+Malaysian Grand Prix,2012,rain,2,0,0,0,1,0
+Australian Grand Prix,2012,fine,1,1,0,0,0,0
+Brazilian Grand Prix,2011,fine,19,1,0,0,0,0
+Abu Dhabi Grand Prix,2011,"fine,dry",18,1,0,1,0,0
+Indian Grand Prix,2011,sunny,17,1,0,0,0,0
+Korean Grand Prix,2011,"dry,rain",16,0,0,1,1,0
+Japanese Grand Prix,2011,"sunny,dry",15,1,0,1,0,0
+Singapore Grand Prix,2011,"hot,humid",14,1,0,0,1,0
+Italian Grand Prix,2011,sunny,13,1,0,0,0,0
+Belgian Grand Prix,2011,"cloudy,dry",12,0,0,1,0,1
+Hungarian Grand Prix,2011,"cloudy,rain",11,0,0,0,1,1
+German Grand Prix,2011,"cloudy,rain",10,0,0,0,1,1
+British Grand Prix,2011,dry,9,0,0,1,0,0
+Spanish Grand Prix,2011,"sunny,fine",8,1,0,0,0,0
+Canadian Grand Prix,2011,"wet,heavy rain",7,0,0,0,1,0
+Monaco Grand Prix,2011,"sunny,fine",6,1,0,0,0,0
+Spanish Grand Prix,2011,"sunny,fine",5,1,0,0,0,0
+Turkish Grand Prix,2011,"sunny,fine",4,1,0,0,0,0
+Chinese Grand Prix,2011,"fine,dry",3,1,0,1,0,0
+Malaysian Grand Prix,2011,"cloudy,dry",2,0,0,1,0,1
+Australian Grand Prix,2011,sunny,1,1,0,0,0,0

@@ -1,0 +1,11 @@
+Ma valeur a predire est position dans le dataset driver_standing
+- Pour les pilotes qui n'ont pas fini la course, ajouter une valeur de temps arbitraitre pour eviter les N/A
+- faire un traitement deja pour déterminer le temps de chaque pilote à partir du temps du pilote 1er
+
+visualisation:
+- visuel du nombre de grand prix gagner par (pilote, ecurie)
+
+qui detient le plus de victoires sur un circuit?
+Mettre un flag sur les pilotes actifs
+mettre un flag sur les constructeurs actifs 
+merger les constructeurs qui se sont fait absorber par d'autres (dès le debut c'est mieux)
