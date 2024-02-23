@@ -5,40 +5,65 @@ import plotly.express as px
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve, auc
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
+from imblearn.over_sampling import RandomOverSampler, SMOTE
 
 
-def make_classification(df: pd.DataFrame, features:list[str], target:str) -> list[xgb.XGBClassifier, pd.Series, np.ndarray, object]:    
+def make_classification(df: pd.DataFrame, features:list[str], target:str, optim:bool=False) -> list[xgb.XGBClassifier, pd.Series, np.ndarray, object]:    
     X = df[features]
     y = df[target]
     # Splitting the dataset 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.35, random_state=62)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
+    if optim:
     # Model initialization
-    model = xgb.XGBClassifier(enable_categorical=True, device="cuda")
+        model = xgb.XGBClassifier(enable_categorical=True, device="cuda")
+        smote = SMOTE(random_state=42)
+        X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
+        # Define the grid of parameters to search
+        param_grid = {
+            'n_estimators': [50, 100, 205],
+            'max_depth': [3, 8, 12],
+            'learning_rate': [0.01, 0.05, 0.5],
+            # 'reg_lambda': [0, 1],
+            # 'reg_alpha': [20, 40, 100],
+            'eta': [0.01, 0.08, 0.2],
+            'subsample': [0.5, 0.8,1],
+            'colsample_bytree': [0.5, 0.8,1],
+            'seed': [12, 44, 80],
+            'objective': ['multi:softmax']
+        }
 
-    # Define the grid of parameters to search
-    param_grid = {
-        'n_estimators': [50, 100, 150, 205],
-        'max_depth': [7, 14, 25, 38],
-        'learning_rate': [0.1, 0.01, 0.05],
-        'reg_lambda': [0, 1],
-        'reg_alpha': [20, 40, 100],
-    }
+        # Initialize GridSearchCV
+        grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5, n_jobs=-1, verbose=2)
+        grid_search.fit(X_train_resampled, y_train_resampled)
+        best_model = grid_search.best_estimator_
+        # Predictions
+        y_pred = best_model.predict(X_test)
+        print('Best parameters ============', grid_search.best_params_)
+        model = best_model
 
-    # Initialize GridSearchCV
-    grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=8, n_jobs=-1, verbose=2)
-    grid_search.fit(X_train, y_train)
-    best_model = grid_search.best_estimator_
-    # Predictions
-    y_pred = best_model.predict(X_test)
+    else:    
+        oversampler = RandomOverSampler(sampling_strategy='not majority')
+        smote = SMOTE(random_state=42)
+        X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
+        # X_train_resampled, y_train_resampled = oversampler.fit_resample(X_train, y_train)
+        model = xgb.XGBClassifier(
+            enable_categorical=True, 
+            n_estimators=150,
+            learning_rate=0.08,
+            max_depth=7
+        )
+        model.fit(X_train_resampled, y_train_resampled)
+        y_pred = model.predict(X_test)
+
 
     # Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred, zero_division='warn')
 
     print("Accuracy:", accuracy)
-    print('Best parameters ============', grid_search.best_params_)
 
-    results = [best_model, y_test, y_pred, X_train, report]
+    results = [model, y_test, y_pred, X_train, report]
 
     return results
 
