@@ -2,70 +2,48 @@ import xgboost as xgb
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve, auc
+import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve, auc, roc_auc_score
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
-from imblearn.over_sampling import RandomOverSampler, SMOTE
+from imblearn.over_sampling import RandomOverSampler, SMOTE   
+    
 
-
-def make_classification(df: pd.DataFrame, features:list[str], target:str, optim:bool=False) -> list[xgb.XGBClassifier, pd.Series, np.ndarray, object]:    
+def modelfit(df: pd.DataFrame, features:list[str], target:str, model:xgb.XGBClassifier, optim:bool=False) -> list[object]: 
     X = df[features]
     y = df[target]
     # Splitting the dataset 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
-
-    if optim:
-    # Model initialization
-        model = xgb.XGBClassifier(enable_categorical=True, device="cuda")
-        smote = SMOTE(random_state=42)
-        X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
-        # Define the grid of parameters to search
-        param_grid = {
-            'n_estimators': [50, 100, 205],
-            'max_depth': [3, 8, 12],
-            'learning_rate': [0.01, 0.05, 0.5],
-            # 'reg_lambda': [0, 1],
-            # 'reg_alpha': [20, 40, 100],
-            'eta': [0.01, 0.08, 0.2],
-            'subsample': [0.5, 0.8,1],
-            'colsample_bytree': [0.5, 0.8,1],
-            'seed': [12, 44, 80],
-            'objective': ['multi:softmax']
-        }
-
-        # Initialize GridSearchCV
-        grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5, n_jobs=-1, verbose=2)
-        grid_search.fit(X_train_resampled, y_train_resampled)
-        best_model = grid_search.best_estimator_
-        # Predictions
-        y_pred = best_model.predict(X_test)
-        print('Best parameters ============', grid_search.best_params_)
-        model = best_model
-
-    else:    
-        oversampler = RandomOverSampler(sampling_strategy='not majority')
-        smote = SMOTE(random_state=42)
-        X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
-        # X_train_resampled, y_train_resampled = oversampler.fit_resample(X_train, y_train)
-        model = xgb.XGBClassifier(
-            enable_categorical=True, 
-            n_estimators=150,
-            learning_rate=0.08,
-            max_depth=7
-        )
-        model.fit(X_train_resampled, y_train_resampled)
-        y_pred = model.predict(X_test)
-
+ 
+    # oversampler = RandomOverSampler(sampling_strategy='not majority')
+    # smote = SMOTE(random_state=42)
+    # X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
+    # X_train_resampled, y_train_resampled = oversampler.fit_resample(X_train, y_train)
+    # model.fit(X_train_resampled, y_train_resampled)
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
+    dtrain_predprob = model.predict_proba(X_train)
 
     # Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
-    report = classification_report(y_test, y_pred, zero_division='warn')
+    report = classification_report(y_test, y_pred, zero_division='warn', labels=np.unique(y_pred))
 
-    print("Accuracy:", accuracy)
+    #Print model report:
+    print("\nModel Report")
+    print("Accuracy : %.4g" % accuracy)
+    print("AUC Score (Train): %f" % roc_auc_score(y_train, dtrain_predprob, multi_class='ovo'))
+    
+    # Predict on testing data:
+    dtest_predprob = model.predict_proba(X_test)
+    print('AUC Score (Test): %f' % roc_auc_score(y_test, dtest_predprob, multi_class='ovo'))
+                
+    feat_imp = pd.Series(model.get_booster().get_fscore()).sort_values(ascending=False)
+    feat_imp.plot(kind='bar', title='Feature Importances')
+    plt.ylabel('Feature Importance Score')
 
     results = [model, y_test, y_pred, X_train, report]
-
     return results
+
 
 def analysing_feature_importance(model:xgb.XGBClassifier, df_train: pd.DataFrame):
     # Get feature importances
@@ -113,3 +91,5 @@ def plot_auc_roc(data:tuple[pd.Series, np.ndarray]) -> None:
                 title=f'Receiver Operating Characteristic (ROC) Curve (AUC = {roc_auc:.2f})',
                 labels={'False Positive Rate': 'False Positive Rate', 'True Positive Rate': 'True Positive Rate'})
     fig.show()
+
+
