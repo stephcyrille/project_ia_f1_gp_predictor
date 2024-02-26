@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.base import BaseEstimator
 from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import LabelEncoder
 
 
 def put_a_flag_by_condition(target_col:str, values_list:list[str], df=pd.DataFrame()) -> pd.DataFrame:
@@ -33,3 +34,9 @@ def process_features_standardisation(df:pd.DataFrame,
 
     new_df:pd.DataFrame = preprocessor.fit_transform(df) # type: ignore
     return new_df
+
+def encode_labels(df:pd.DataFrame, cols:list[str]) -> pd.DataFrame:
+    le = LabelEncoder()
+    for i in cols:
+        df[i] = le.fit_transform(df[i])
+    return df
