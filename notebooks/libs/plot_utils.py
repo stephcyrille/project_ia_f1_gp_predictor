@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.express as px
 from sklearn.metrics import confusion_matrix
+import seaborn as sns
 
 def plot_boxplots(df:pd.DataFrame, columns:list[str], rows:int = 3, cols:int =4) -> None:
   # create a figure with his axes
@@ -38,14 +39,23 @@ def analysing_feature_importance(feature_imp_serie: pd.Series):
 
 
 def plot_confusion_matrix(data:tuple[pd.Series, np.ndarray]) -> None:
-    # Calculate confusion matrix
-    conf_matrix = confusion_matrix(data[0], data[1])
-    # Plot confusion matrix
-    fig = px.imshow(conf_matrix,
-        labels=dict(x="Predicted", y="Actual"),
-        x=[f"Predicted {i}" for i in range(1, conf_matrix.shape[1] + 1)],
-        y=[f"Actual {i}" for i in range(1, conf_matrix.shape[0] + 1)],
-        title="Confusion Matrix",
-        width=1200, 
-        height=800)
-    fig.show()
+  # Calculate confusion matrix
+  conf_matrix = confusion_matrix(data[0], data[1])
+
+   # Plot confusion matrix
+  plt.figure(figsize=(12, 8))
+  sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='d', cbar=False)
+  plt.xlabel('Predicted labels')
+  plt.ylabel('True labels')
+  plt.title('Confusion Matrix')
+  plt.show()
+  
+  # Plot confusion matrix
+  fig = px.imshow(conf_matrix,
+      labels=dict(x="Predicted", y="Actual"),
+      x=[f"Predicted {i}" for i in range(1, conf_matrix.shape[1] + 1)],
+      y=[f"Actual {i}" for i in range(1, conf_matrix.shape[0] + 1)],
+      title="Confusion Matrix",
+      width=1200, 
+      height=800)
+  fig.show()
