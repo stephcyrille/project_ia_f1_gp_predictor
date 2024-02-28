@@ -5,21 +5,22 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, classification_report, roc_curve, auc, roc_auc_score
 from sklearn.model_selection import train_test_split, GridSearchCV
-from imblearn.over_sampling import RandomOverSampler, SMOTE   
+# from imblearn.over_sampling import RandomOverSampler, SMOTE   
     
 
-def modelfit(df: pd.DataFrame, features:list[str], target:str, model:xgb.XGBClassifier, optim:bool=False) -> list[object]: 
+def modelfit(df: pd.DataFrame, features:list[str], target:str, model:xgb.XGBClassifier, class_weights:np.ndarray=[]) -> list[object]: 
     X = df[features]
     y = df[target]
     # Splitting the dataset 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=33)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=48)
  
     # oversampler = RandomOverSampler(sampling_strategy='not majority')
     # smote = SMOTE(random_state=42)
     # X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
     # X_train_resampled, y_train_resampled = oversampler.fit_resample(X_train, y_train)
     # model.fit(X_train_resampled, y_train_resampled)
-
+    if len(class_weights) > 0:
+        model.fit(X_train, y_train, sample_weight=class_weights[y_train])
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
     dtrain_predprob = model.predict_proba(X_train)
@@ -41,7 +42,7 @@ def modelfit(df: pd.DataFrame, features:list[str], target:str, model:xgb.XGBClas
     # feat_imp.plot(kind='bar', title='Feature Importances')
     # plt.ylabel('Feature Importance Score')
 
-    results = [model, y_test, y_pred, X_train, report]
+    results = [model, y_test, y_pred, X_train, report, y_train]
     return results
 
 def plot_auc_roc(data:tuple[pd.Series, np.ndarray]) -> None:
