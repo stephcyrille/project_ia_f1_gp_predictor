@@ -5,6 +5,12 @@ import plotly.express as px
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
 
+def plot_correlation_matrix(df:pd.DataFrame) -> None:
+  corr_df = df.corr(method='pearson', numeric_only=True)
+  plt.figure(figsize=(20, 10))
+  sns.heatmap(corr_df, annot=True)
+  plt.show()
+
 def plot_boxplots(df:pd.DataFrame, columns:list[str], rows:int = 3, cols:int =4) -> None:
   # create a figure with his axes
   fig, axes = plt.subplots(rows, cols, figsize=(20, 8))
