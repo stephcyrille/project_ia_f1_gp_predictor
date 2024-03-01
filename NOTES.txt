@@ -13,3 +13,5 @@ merger les constructeurs qui se sont fait absorber par d'autres (dès le debut c
 
 
 Temps moyen sur le circuit a ajouter sur chaque driver id field
+
+Compter le nombre de grand prix par pilote (ancienneté)
