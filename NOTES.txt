@@ -9,3 +9,7 @@ qui detient le plus de victoires sur un circuit?
 Mettre un flag sur les pilotes actifs
 mettre un flag sur les constructeurs actifs 
 merger les constructeurs qui se sont fait absorber par d'autres (dès le debut c'est mieux)
+
+
+
+Temps moyen sur le circuit a ajouter sur chaque driver id field

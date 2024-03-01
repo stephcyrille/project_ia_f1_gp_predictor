@@ -1,4 +1,4 @@
-resultId,raceId,driverId,constructorId,grid,positionOrder,points,laps,milliseconds,fastestLap,fastestLapTime,fastestLapSpeed,statusId,year,round,circuitId,name
+resultId,raceId,driverId,constructorId,grid,race_rank,points,laps,milliseconds,fastestLap,fastestLapTime,fastestLapSpeed,statusId,year,round,circuitId,name
 1,18,1,1,1,1,10.0,58,5690616,39,87452,218.3,1,2008,1,1,Australian Grand Prix
 2,18,2,2,5,2,8.0,58,5696094,41,87739,217.586,1,2008,1,1,Australian Grand Prix
 3,18,3,3,7,3,6.0,58,5698779,41,88090,216.719,1,2008,1,1,Australian Grand Prix

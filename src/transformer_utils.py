@@ -67,3 +67,19 @@ def remove_outliers(series, threshold=3):
     """
     z_scores = np.abs((series - series.mean()) / series.std())
     return series[(z_scores < threshold)]
+
+def fill_na(df: pd.DataFrame, field: str, value:object) -> pd.DataFrame:
+    car = '\\N'
+    df.loc[df[field] == car, field] = value
+    return df
+
+def set_the_right_col_type(df: pd.DataFrame, fields:list[str], np_type:str) -> pd.DataFrame:
+    for field in fields:
+      df[field] = df[field].astype(np_type)
+    return df
+
+def print_df_missing_values(df:pd.DataFrame, missing_caracter:str) -> None:
+    fields:list[str] = df.columns.to_list()
+    for field in fields:
+      car = '\\N'
+      print(f"{field}: {df[df[field] == car][field].count()}")
