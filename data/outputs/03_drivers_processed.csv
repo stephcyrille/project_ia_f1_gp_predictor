@@ -815,7 +815,7 @@ driverId,number,forename,surname,dob,nationality,driver_is_active
 814,\N,Paul,di Resta,1986-04-16,British,0
 815,11,Sergio,Pérez,1990-01-26,Mexican,1
 816,\N,Jérôme,d'Ambrosio,1985-12-27,Belgian,0
-817,3,Daniel,Ricciardo,1989-07-01,Australian,0
+817,3,Daniel,Ricciardo,1989-07-01,Australian,1
 818,25,Jean-Éric,Vergne,1990-04-25,French,0
 819,\N,Charles,Pic,1990-02-15,French,0
 820,4,Max,Chilton,1991-04-21,British,0
